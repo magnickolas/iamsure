@@ -4,18 +4,20 @@
     all: unset;
     background-color: rgba(0,0,0,0.7);
     height: 100%;
+    left: 0;
     overflow: auto;
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 9998;
 }
 
 .modal-outer > .modal {
     all: unset;
-	  box-sizing: border-box;
     background: #191912;
     border-radius: 10px;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+    box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     left: 50%;
     overflow: hidden;
