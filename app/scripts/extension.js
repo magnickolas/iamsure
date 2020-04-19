@@ -65,6 +65,13 @@ function showConfirmDialog() {
         chrome.runtime.sendMessage(event.data)
       }
     }, false)
+
+    chrome.runtime.onMessage.addListener(
+      function(request, sender, sendResponse) {
+        if (request.action === 'removePopup') {
+          removePopup(styles, outer_div_element)
+        }
+    })
   }
 }
 

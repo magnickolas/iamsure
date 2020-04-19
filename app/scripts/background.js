@@ -15,6 +15,7 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(function(details) {
     if(details.frameId === 0) {
         chrome.tabs.get(details.tabId, function(tab) {
             if(tab.url === details.url) {
+                chrome.tabs.sendMessage(details.tabId, {action: "removePopup"})
                 chrome.tabs.sendMessage(details.tabId, {action: "showPopup"})
             }
         })
