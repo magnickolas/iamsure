@@ -2,108 +2,108 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-  font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	min-height: 100vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .settings {
-	background: rgb(219, 219, 219);
-	border-radius: 15px;
-	width: 100%;
-  transition: width .125s;
+    background: rgb(219, 219, 219);
+    border-radius: 15px;
+    transition: width .125s;
+    width: 100%;
 }
 @media screen and (min-width: 500px) {
-	.settings {
-		width: 360px;
-	}
+    .settings {
+        width: 360px;
+    }
 }
 @media screen and (min-width: 992px) {
-	.settings {
-		width: 450px;
-	}
+    .settings {
+        width: 450px;
+    }
 }
 
 /* Heading */
 .settings > .heading {
-	align-items: center;
-	border-bottom: 1px solid #999;
-	display: flex;
-	justify-content: center;
-	padding: 15px 0;
+    align-items: center;
+    border-bottom: 1px solid #999;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
 }
 .settings > .heading > h1 {
-	color: rgb(60, 60, 60);
-  font-size: 35px;
+    color: rgb(60, 60, 60);
+    font-size: 35px;
 }
 
 /* Sections */
 .settings > .content {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-top: 15px;
-	padding: 0 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 0 10px;
 }
 .settings > .content > .filter-list {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .settings > .content > .submit-limiter {
-	align-items: center;
-	display: flex;
-	justify-content: center;
-	margin: 15px 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
 }
 
 /* Standard elements */
 .settings > .content > section {
-	width: 100%;
+    width: 100%;
 }
 .settings > .content h2 {
-	color: rgb(85, 85, 85);
-  font-size: 25px;
-  margin: 0 auto 10px auto;
+    color: rgb(85, 85, 85);
+    font-size: 25px;
+    margin: 0 auto 10px auto;
 }
 .settings > .content textarea {
-	background: rgb(240, 240, 240);
-	border-radius: 3px;
-	border: none;
-	font-family: 'Roboto Mono', monospace;
-	min-height: 330px;
-	padding: 8px 10px;
-	resize: none;
-	width: 80%;
-  color: rgb(60, 60, 60);
-  font-size: 15px;
-  margin: auto;
-  outline: none;
+    background: rgb(240, 240, 240);
+    border-radius: 3px;
+    border: none;
+    color: rgb(60, 60, 60);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    margin: auto;
+    min-height: 330px;
+    outline: none;
+    padding: 8px 10px;
+    resize: none;
+    width: 80%;
 }
 .settings > .content .btn {
-	background: rgb(83, 83, 83);
-	border: none;
-	color: rgb(216, 216, 216);
-	display: inline-block;
-	padding: 12px 24px;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  outline: none;
-  user-select: none;
+    background: rgb(83, 83, 83);
+    border-radius: 8px;
+    border: none;
+    border: none;
+    color: rgb(216, 216, 216);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    outline: none;
+    padding: 12px 24px;
+    user-select: none;
 }
 .settings > .content .btn:hover {
-	background: rgb(75, 75, 75);
+    background: rgb(75, 75, 75);
 }
 .settings > .content .btn:active {
-	background: rgb(67, 67, 67);
+    background: rgb(67, 67, 67);
 }
