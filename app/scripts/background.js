@@ -4,7 +4,12 @@ chrome.runtime.onMessage.addListener(
             chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
                 var activeTab = tabs[0]
                 if (activeTab) {
-                    chrome.tabs.remove(activeTab.id)
+                    var tabId = activeTab.id
+                    chrome.tabs.goBack(tabId, () => {
+                        if (chrome.runtime.lastError) {
+                            chrome.tabs.remove(tabId)
+                        }
+                    })
                 }
             })
         }
