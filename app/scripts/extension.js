@@ -74,13 +74,24 @@ function verifyCurrentUrl() {
       var filters =
         filtersText.filters
           .split("\n")
-          .map(glob => globToRegex(glob))
-
+          .map(glob => globToFilter(glob))
       var url = location.href
-      const matchUrl = (pattern) => {
-        return url.match(pattern)
+      
+      var matches = false
+
+      for (const filter of filters) {
+        var pattern = filter.pattern
+        var isBlackList = filter.blacklist
+        if (url.match(pattern)) {
+          if (!isBlackList) {
+            matches = true
+          } else {
+            matches = false
+          }
+        }
       }
-      if (filters.some(matchUrl)) {
+
+      if (matches) {
         showConfirmDialog()
       }
     }
@@ -96,8 +107,14 @@ chrome.runtime.onMessage.addListener(
 
 verifyCurrentUrl()
 
-function globToRegex(glob) {
+function globToFilter(glob) {
   var regexp = ""
+  var isBlackList = false
+
+  if (glob.charAt(0) == '-') {
+    isBlackList = true
+    glob = glob.substr(1)
+  }
 
   for (const c of glob) {
     switch (c) {
@@ -122,5 +139,8 @@ function globToRegex(glob) {
     }
   }
 
-  return new RegExp(`^${regexp}$`)
+  return {
+    "pattern": new RegExp(`^${regexp}$`),
+    "blacklist": isBlackList
+  }
 }
