@@ -1,0 +1,31 @@
+{
+  "name": "imsure",
+  "version": "0.1",
+  "description": "Asks your confirmation to open the potentially distracting webpage.",
+  "permissions": [
+    "<all_urls>",
+    "storage",
+    "webNavigation"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["scripts/extension.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    "styles/confirm.css",
+    "styles/fonts.css",
+    "fonts/opensans-regular-webfont.woff2"
+  ],
+  "manifest_version": 2
+}

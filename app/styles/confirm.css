@@ -1,0 +1,83 @@
+@import "fonts.css";
+
+.modal-outer {
+    all: unset;
+    position: fixed;
+    background-color: rgba(0,0,0,0.7);
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 9998;
+}
+
+.modal-outer > .modal {
+    all: unset;
+    width: 500px;
+    overflow: hidden;
+    background: #191912;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.2);
+    font-family: Open Sans;
+    user-select: none;
+}
+
+.modal-outer > .modal > .text {
+    all: unset;
+    color: #d4d4d4;
+    text-align: center;
+    font-size: 30px;
+}
+
+.modal-outer > .modal > .buttons {
+    all: unset;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.modal-outer > .modal > .buttons > .reject-button {
+    all: unset;
+    background-color: #F64747;
+    border: none;
+    color: #3D1410;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: auto;
+    font-size: 25px;
+    margin-left: 20%;
+    border-radius: 0px;
+}
+
+.modal-outer > .modal > .buttons > .reject-button:hover {
+background-color: #C93E3E;
+}
+
+.modal-outer > .modal > .buttons > .accept-button {
+    all: unset;
+    background-color: #3CF73C;
+    border: none;
+    color: #002A15;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    cursor:pointer;
+    width: auto;
+    font-size: 25px;
+    margin-right: 20%;
+}
+
+.modal-outer > .modal > .buttons > .accept-button:hover {
+background-color: #27B827;
+}
