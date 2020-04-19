@@ -1,68 +1,109 @@
-@import 'fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
+}
 
 .settings {
-    text-align: center;
-    background: rgb(219, 219, 219);
-    border: none;
-    border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    transform: translate(-50%, -50%);
-    padding: 0px 30px 30px 30px;
-    overflow: hidden;
-    display: block;
+	background: rgb(219, 219, 219);
+	border-radius: 15px;
+	width: 100%;
+  transition: width .125s;
+}
+@media screen and (min-width: 500px) {
+	.settings {
+		width: 360px;
+	}
+}
+@media screen and (min-width: 992px) {
+	.settings {
+		width: 450px;
+	}
 }
 
-.settings > h1 {
-    display: block;
-    font-family: Open Sans;
-    font-size: 60px;
-    color: rgb(85, 85, 85);
-    user-select: none;
+/* Heading */
+.settings > .heading {
+	align-items: center;
+	border-bottom: 1px solid #999;
+	display: flex;
+	justify-content: center;
+	padding: 15px 0;
+}
+.settings > .heading > h1 {
+	color: rgb(60, 60, 60);
+  font-size: 35px;
 }
 
-.settings > h2 {
-    display: block;
-    text-align: left;
-    font-family: Open Sans;
-    font-size: 40px;
-    margin-left: 50px;
-    color: rgb(85, 85, 85);
-    user-select: none;
+/* Sections */
+.settings > .content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 15px;
+	padding: 0 10px;
+}
+.settings > .content > .filter-list {
+	display: flex;
+	flex-direction: column;
+}
+.settings > .content > .submit-limiter {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	margin: 15px 0;
 }
 
-.settings > #filter-input {
-    display: block;
-    background: rgb(240, 240, 240);
-    width: 70%;
-    margin: auto;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-family: Open Sans;
-    font-size: 20px;
-    resize: none;
+/* Standard elements */
+.settings > .content > section {
+	width: 100%;
 }
-
-.settings > #filters-save-button {
-    display: block;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Open Sans;
-    font-size: 30px;
-    padding: 15px 25px 15px 25px;
-    background: rgb(83, 83, 83);
-    color: rgb(216, 216, 216);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    outline: none;
-    user-select: none;
+.settings > .content h2 {
+	color: rgb(85, 85, 85);
+  font-size: 25px;
+  margin: 0 auto 10px auto;
 }
-
-.settings > #filters-save-button:active {
-    background: rgb(68, 68, 68);
+.settings > .content textarea {
+	background: rgb(240, 240, 240);
+	border-radius: 3px;
+	border: none;
+	font-family: 'Roboto Mono', monospace;
+	min-height: 330px;
+	padding: 8px 10px;
+	resize: none;
+	width: 80%;
+  color: rgb(60, 60, 60);
+  font-size: 15px;
+  margin: auto;
+  outline: none;
+}
+.settings > .content .btn {
+	background: rgb(83, 83, 83);
+	border: none;
+	color: rgb(216, 216, 216);
+	display: inline-block;
+	padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  user-select: none;
+}
+.settings > .content .btn:hover {
+	background: rgb(75, 75, 75);
+}
+.settings > .content .btn:active {
+	background: rgb(67, 67, 67);
 }
