@@ -43,6 +43,7 @@
 .settings > .heading > h1 {
     color: rgb(60, 60, 60);
     font-size: 35px;
+    user-select: none;
 }
 
 /* Sections */
@@ -73,6 +74,7 @@
     color: rgb(85, 85, 85);
     font-size: 25px;
     margin: 0 auto 10px auto;
+    user-select: none;
 }
 .settings > .content textarea {
     background: rgb(240, 240, 240);
