@@ -27,5 +27,10 @@
     "styles/fonts.css",
     "fonts/opensans-regular-webfont.woff2"
   ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
   "manifest_version": 2
 }
