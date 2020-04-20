@@ -8,22 +8,26 @@
     padding: 0;
 }
 
+body {
+    min-width: 350px;
+}
+
 .container {
     align-items: center;
     display: flex;
-    justify-content: center;
     min-height: 100vh;
+    justify-content: center;
 }
 
 .settings {
     background: rgb(219, 219, 219);
-    border-radius: 15px;
     transition: width .125s;
     width: 100%;
 }
 @media screen and (min-width: 500px) {
     .settings {
         width: 360px;
+        border-radius: 15px;
     }
 }
 @media screen and (min-width: 992px) {
@@ -56,13 +60,14 @@
     padding: 0 10px;
 }
 .settings > .content > .filter-list {
+    align-items: center;
     display: flex;
     flex-direction: column;
 }
 .settings > .content > .submit-limiter {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: cent30;
     margin: 15px 0;
 }
 
@@ -73,7 +78,7 @@
 .settings > .content h2 {
     color: rgb(85, 85, 85);
     font-size: 25px;
-    margin: 0 auto 10px auto;
+    margin-bottom: 10px;
     user-select: none;
 }
 .settings > .content textarea {
@@ -83,7 +88,6 @@
     color: rgb(60, 60, 60);
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
-    margin: auto;
     min-height: 330px;
     outline: none;
     padding: 8px 10px;
@@ -93,7 +97,6 @@
 .settings > .content .btn {
     background: rgb(83, 83, 83);
     border-radius: 8px;
-    border: none;
     border: none;
     color: rgb(216, 216, 216);
     cursor: pointer;

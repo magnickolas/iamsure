@@ -30,5 +30,12 @@
     "48": "icons/48.png",
     "128": "icons/128.png"
   },
+  "browser_action": {
+      "default_icon": {
+          "19": "icons/19.png",
+          "38": "icons/38.png"
+      },
+      "default_popup": "options.html"
+  },
   "manifest_version": 2
 }
