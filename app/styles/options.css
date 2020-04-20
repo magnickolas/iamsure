@@ -67,7 +67,7 @@ body {
 .settings > .content > .submit-limiter {
     align-items: center;
     display: flex;
-    justify-content: cent30;
+    justify-content: center;
     margin: 15px 0;
 }
 
