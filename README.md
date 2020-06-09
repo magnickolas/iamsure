@@ -3,9 +3,7 @@
 Chrome extension asks if you sure wanna get distracted on specific domains.
 
 <p align="center">
-  <a href="https://github.com/magnickolas/iamsure">
-    <img src="https://oplachko.com:500/uploads/upload_9b736d6264afa4eca62f1141ba71d53a.png" width="45%">
-  </a>
+  <img src="images/confirmation_dialog.png" width="45%">
 </p>
 
 ## Installation
